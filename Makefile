@@ -31,15 +31,17 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
-TARGET		:=	$(notdir $(CURDIR))
-BUILD		:=	build
-SOURCES		:=	source
-DATA		:=	data
-INCLUDES	:=	include
-GRAPHICS	:=	gfx
-#GFXBUILD	:=	$(BUILD)
-ROMFS		:=	romfs
-GFXBUILD	:=	$(ROMFS)/gfx
+TARGET			:=	$(notdir $(CURDIR))
+BUILD			:=	build
+SOURCES			:=	source
+DATA			:=	data
+INCLUDES		:=	include
+GRAPHICS		:=	gfx
+#GFXBUILD		:=	$(BUILD)
+ROMFS			:=	romfs
+GFXBUILD		:=	$(ROMFS)/gfx
+APP_DESCRIPTION := A simple snake clone
+APP_AUTHOR		:= @GaggiX (Telegram)
 
 #---------------------------------------------------------------------------------
 # options for code generation

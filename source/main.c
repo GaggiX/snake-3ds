@@ -201,7 +201,6 @@ int main(int argc, char *argv[])
 		C2D_SceneBegin(top);
 
 		C2D_DrawRectangle(mod(snake.head.x, SCREEN_WIDTH), mod(snake.head.y, SCREEN_HEIGHT), 0, 10, 10, clrRed, clrRed, clrRed, clrRed);
-		C2D_DrawRectangle(food.x, food.y, 0, 10, 10, clrGreen, clrGreen, clrGreen, clrGreen);
 
 		struct LinkedCube *navigate_cube = snake.tail.cubes;
 		for (size_t i = 0; i < snake.tail.len; i++)
@@ -209,6 +208,8 @@ int main(int argc, char *argv[])
 			C2D_DrawRectangle(mod(navigate_cube->cube.x, SCREEN_WIDTH), mod(navigate_cube->cube.y, SCREEN_HEIGHT), 0, 10, 10, clrBlue, clrBlue, clrBlue, clrBlue);
 			navigate_cube = navigate_cube->cube_back;
 		}
+		
+		C2D_DrawRectangle(food.x, food.y, 0, 10, 10, clrGreen, clrGreen, clrGreen, clrGreen);
 
 		C3D_FrameEnd(0);
 	}
